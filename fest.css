@@ -1,0 +1,538 @@
+/* ---------------------------
+   GENERAL STYLING
+---------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7ff;
+    color: #222;
+}
+
+section {
+    padding: 70px 8%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+    color: #172554;
+}
+
+/* ---------------------------
+   NAVIGATION
+---------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: #172554;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #60a5fa;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* ---------------------------
+   HERO BANNER
+---------------------------- */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(23, 37, 84, 0.85),
+            rgba(37, 99, 235, 0.75)
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+    animation: fadeUp 1.2s ease;
+}
+
+.tagline {
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin: 15px 0;
+}
+
+.hero h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 30px;
+
+    background: white;
+    color: #172554;
+
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+}
+
+/* ---------------------------
+   ABOUT
+---------------------------- */
+
+.about {
+    text-align: center;
+    background: white;
+}
+
+.about > p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+/* ---------------------------
+   EVENT CARDS
+---------------------------- */
+
+.event-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.event-card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+
+    transition: 0.4s;
+}
+
+.event-card:hover {
+    transform: translateY(-12px);
+}
+
+.event-banner {
+    height: 170px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 70px;
+    background: #dbeafe;
+}
+
+.cultural .event-banner {
+    background: #fce7f3;
+}
+
+.sports .event-banner {
+    background: #dcfce7;
+}
+
+.event-card h3,
+.event-card p,
+.event-card ul {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.event-card h3 {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #172554;
+}
+
+.event-card p {
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+.event-card ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    line-height: 1.8;
+}
+
+.card-btn {
+    display: inline-block;
+
+    margin: 20px 25px 25px;
+
+    padding: 10px 22px;
+
+    background: #2563eb;
+    color: white;
+
+    border-radius: 20px;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.card-btn:hover {
+    background: #172554;
+}
+
+/* ---------------------------
+   WORKSHOPS
+---------------------------- */
+
+.workshops {
+    background: #dbeafe;
+}
+
+.workshop-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.workshop-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.workshop-card:hover {
+    transform: scale(1.03);
+}
+
+.workshop-card h3 {
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.workshop-card p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ---------------------------
+   SCHEDULE TABLE
+---------------------------- */
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #172554;
+    color: white;
+}
+
+tr:hover {
+    background: #eff6ff;
+}
+
+/* ---------------------------
+   COORDINATORS
+---------------------------- */
+
+.coordinators {
+    background: #f1f5f9;
+}
+
+.coordinator-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.coordinator-card {
+    background: white;
+    padding: 30px;
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    transition: 0.3s;
+}
+
+.coordinator-card:hover {
+    transform: translateY(-8px);
+}
+
+.person {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.coordinator-card h3 {
+    color: #2563eb;
+    margin-bottom: 10px;
+}
+
+.coordinator-card p {
+    margin: 8px;
+}
+
+/* ---------------------------
+   RULES
+---------------------------- */
+
+.rules {
+    background: white;
+}
+
+.rules-box {
+    max-width: 800px;
+    margin: auto;
+
+    padding: 30px;
+
+    background: #eff6ff;
+    border-left: 6px solid #2563eb;
+
+    border-radius: 10px;
+}
+
+.rules-box ol {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+/* ---------------------------
+   REGISTRATION FORM
+---------------------------- */
+
+.registration {
+    background: #dbeafe;
+}
+
+form {
+    max-width: 700px;
+    margin: auto;
+
+    background: white;
+    padding: 35px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 14px;
+    margin-bottom: 18px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #172554;
+    transform: translateY(-3px);
+}
+
+/* ---------------------------
+   FOOTER
+---------------------------- */
+
+footer {
+    padding: 35px;
+    text-align: center;
+
+    background: #172554;
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* ---------------------------
+   ANIMATIONS
+---------------------------- */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+---------------------------- */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .event-container,
+    .workshop-container,
+    .coordinator-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 55px 5%;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .nav-links {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    form {
+        padding: 25px;
+    }
+}
